@@ -1,7 +1,11 @@
-const handels = [ '@axisgo',
+const handels = [ 
+      '@axisgo',
       '@pingpay',
       '@axisbank',
       '@apl',
+      '@dbs',
+      '@dcb',
+      '@dcbbank'
       '@axisb',
       '@abfspay',
       '@fbl',
