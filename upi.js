@@ -64,6 +64,15 @@ class UPI {
     return this
   }
 
+  _validate() {
+    if (this.isDynamic && !this.params.has('tr')) {
+      throw new Error('Transaction reference ID Mandatory for dynamic URL generation');
+    }
+    if (this.params.has('mc') && !this.params.has('tr')) {
+      throw new Error('Transaction reference ID Mandatory for Merchant transactions');
+    }
+  }
+
   _buildQS() {
     let qs = '?'
     this.params.forEach((value, key) => {
@@ -78,6 +87,7 @@ class UPI {
   }
 
   getLink() {
+    this._validate()
     let uri =  this.base + this._buildQS()
     return _.encodeUPI(uri)
   }

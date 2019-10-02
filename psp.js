@@ -109,5 +109,4 @@ const pspHandels = [
       '@yesbank',
       '@yesbankltd'];
 
-// export the list as a lookup map
 module.exports = (() => new Map(pspHandels.map(key => [key, true])))()
