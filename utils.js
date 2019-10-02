@@ -1,31 +1,4 @@
-const handels = [ 
-      '@axisgo',
-      '@pingpay',
-      '@axisbank',
-      '@apl',
-      '@dbs',
-      '@dcb',
-      '@dcbbank'
-      '@axisb',
-      '@abfspay',
-      '@fbl',
-      '@hdfcbankjd',
-      '@ikwik',
-      '@idfcbank',
-      '@kmbl',
-      '@indus',
-      '@yesbank',
-      '@ybl',
-      '@okaxis',
-      '@okhdfcbank',
-      '@okicici',
-      '@oksbi',
-      '@icici',
-      '@barodapay',
-      '@icicibank',
-      '@myicici',
-      '@upi'
-    ],
+const handels = require('./psp'),
     vpaExp = /^[\w\-\.]+@\w+$/;
 
 
@@ -33,7 +6,7 @@ const handels = [
     validateVPA: function( vpa ) {
       if(vpaExp.test(vpa)) {
         let handle = vpa.match(/@\w+$/)[0];
-        return !! handels.find( h => h===handle)
+        return handels.has(handle)
       }
     },
     encodeUPI(str) {
