@@ -1,0 +1,24 @@
+{
+  "name": "upi-link",
+  "version": "1.0.0",
+  "description": "Simple npm module to generate UPI deep link ",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souravray/upi-link.git"
+  },
+  "keywords": [
+    "UPI",
+    "payment",
+    "IndiaStack"
+  ],
+  "author": "Sourav Ray",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/souravray/upi-link/issues"
+  },
+  "homepage": "https://github.com/souravray/upi-link#readme"
+}
