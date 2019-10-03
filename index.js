@@ -15,7 +15,7 @@ function factoryP(vpat, name, isDyanmic, ammount) {
 }
 
 function factory(vpat, name, isDyanmic, ammount) {
-    let upi = new UPI(vpat, name, isDyanmic, ammount)  
+    return new UPI(vpat, name, isDyanmic, ammount)  
 }
 
 module.exports = {
