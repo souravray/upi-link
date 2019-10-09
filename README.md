@@ -39,7 +39,7 @@ $ npm i upi-link
  console.log('URI:  ',uri);
  ```
  
- Promise chaining ( __*__ )
+ Promise chaining ___┼___
  ```js
  const upi = require('upi-link')
  
@@ -51,4 +51,4 @@ $ npm i upi-link
  .catch( err => console.error('Error: ',err.message))
  ```
  
- __*__ _Promise chaining is the recomended method_. If you are using plain build object you should ___handled errors asseted by each metods___.
+ ___┼___ _Promise chaining is the recomended method_. If you are using plain build object you should ___handled errors asseted by each metods___.
